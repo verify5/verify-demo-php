@@ -4,10 +4,8 @@ define("URL","http://free7jysj6c2.verify5.com") ;
 
 //获取毫秒的时间戳
 function get_millisecond(){
-    $time = explode ( " ", microtime () );
-    $time = $time[1] . ($time[0] * 1000);
-    $time2 = explode( ".", $time );
-    $time = $time2[0];
+    list($t1,$t2) = explode(' ',microtime());
+    $time = ceil(($t1 + $t2) * 1000);
     return $time;
 }
 //签名
