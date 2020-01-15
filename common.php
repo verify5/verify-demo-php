@@ -1,6 +1,6 @@
 <?php
 //验证Host，请在控制台获取
-define("URL","http://free7jysj6c2.verify5.com") ;
+define("URL","https://free7jysj6c2.verify5.com") ;
 
 //获取毫秒的时间戳
 function get_millisecond(){
