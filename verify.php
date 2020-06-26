@@ -33,8 +33,9 @@ function verify($data,$sign_str){
  * verifyid 即前端用户验证生成的的uuid 
  * timestamp 当前时间,单位毫秒
  */
-$cur_time = (string)get_millisecond() ;
-$data = array("token"=>TOKEN,"timestamp"=>$cur_time,"verifyid"=>VEIFYID);
+$cur_time = (string)get_millisecond() ;		
+// 自定义参数userId & orderId，添加自定义参数后在风险告警和数据分析中可以关联到业务数据
+$data = array("token"=>TOKEN,"timestamp"=>$cur_time,"verifyid"=>VEIFYID, "userId"=>"testuser","orderId"=>"OD22ce32d");
 ksort($data) ;
 //生成签名
 $sign_str = sign($data) ;
